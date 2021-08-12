@@ -1,0 +1,9 @@
+COLLECTIONS:
+
+Obje gruplarını saklamak ve işlemek için kullanılır.
+Collections ile search, sort, insert, manipulation, delete işlemleri yapılabilir.
+collections.png
+
+1-ArrayList
+ArrayList, elemanları saklamak için dynamic system oluşturur.
+
