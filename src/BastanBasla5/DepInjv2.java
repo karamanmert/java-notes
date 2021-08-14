@@ -1,5 +1,6 @@
 package BastanBasla5;
 
+//WITH DIP
 public class DepInjv2 {
     public static void main(String[] args) {
         Carr cc = new Carr(new GasEngine1());

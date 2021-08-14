@@ -1,6 +1,6 @@
 package BastanBasla5;
 //tighly coupled
-
+//without DIP
 public class DependencyInjection {
     public static void main(String[] args) {
         Car c = new Car();
