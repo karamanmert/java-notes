@@ -1,0 +1,290 @@
+https://www.javatpoint.com/collections-in-java
+https://www.callicoder.com/java-linkedlist/
+
+
+??Java Collection nedir?
+-Nesne grubu depolamak ve işlemek için bir frameworktür.
+-Collection kullanarak bir veri üzerinde arama,sıralama,ekleme,değiştirme ve silme yapılabilir. (searching,sorting,insertion,manipulation, deletion)
+
+Java Collection framework provides
+many interfaces (Set, List, Queue, Deque) and
+classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+**Iterator interface
+iterate etmemizi sağlar.
+hasNext(), next()..
+
+**Iterable Interface
+The iterable interface is the root interface for all the collection classes.
+Collection interface extends Iterable..
+It has only one abstract method:
+"Iterator<T> iterator()" ->It returns the iterator over the elements of type T.
+
+**Collection Interface:
+The Collection interface is the interface which is implemented by all the classes in the collection framework
+
+**Collections Class
+Collection extends Object
+methodları statictir.
+Collections.addAll()
+Collections.sort()
+Collections.max(list)
+Collections.min(list)
+Collections.sort(list, Collections.reverseOrder());
+
+**List Interface:
+List extends Collection..
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+**ArrayList:
+It uses a dynamic array to store the duplicate element of different data types.
+
+**LinkedList
+It uses a doubly linked list internally to store the elements.
+It can store the duplicate elements.
+It maintains the insertion order and is not synchronized.
+In LinkedList, the "manipulation is fast" because no shifting is required.
+
+
+*Set Interface
+It extends the Collection interface.
+It represents the unordered set of elements which "doesn't allow us to store the duplicate items".
+We can store at most one null value in Set.
+Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+
+**HashSet
+It represents the collection that uses a "hash table for storage".
+Hashing is used to store the elements in the HashSet.
+"It contains unique items".
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+        HOW TO SORT
+The java.util package provides a utility class Collections which has the static method "sort()".
+Using the "Collections.sort()" method, we can easily sort the ArrayList.
+
+**********************************
+        ITERATING
+Ways to iterate the elements of the collection in Java
+There are various ways to traverse the collection elements:
+
+By Iterator interface. Iterator iter = list.iterator(); while(iter.hasNext()){iter.next();}
+By for-each loop.
+By ListIterator interface.
+By for loop.
+By forEach() method.
+By forEachRemaining() method.
++ stream..
+********************************************************************
+
+        ---ArrayList Class---
+Java ArrayList class uses a "dynamic array" for storing the elements.
+It is like an "array", but there is "no size limit".
+We can add or remove elements anytime. So, it is much more flexible than the traditional array.
+The ArrayList in Java can have the "duplicate" elements also.
+
+**The important points about Java ArrayList class are:
+-Java ArrayList is an ordered collection. It maintains the insertion order of the elements.
+-Java ArrayList class can contain duplicate elements.
+-Java ArrayList class maintains insertion order.
+-Java ArrayList class is non synchronized.
+-Java ArrayList allows random access because array works at the index basis.
+!!!!In ArrayList, manipulation is "little bit slower than the LinkedList" in Java
+because a lot of "shifting" needs to occur if any element is removed from the array list.
+
+important methods: add, remove, removeAll, get,set, clear, isEmpty, sort, size
+
+**********************************
+       LinkedList
+Java LinkedList class uses a "doubly linked list" to store the elements.
+It provides a linked-list data structure.
+
+*The important points about Java LinkedList are:
+-Java LinkedList class can contain duplicate elements.
+-Java LinkedList class maintains insertion order.
+-Java LinkedList class is non synchronized.
+!!!!!In Java LinkedList class, "manipulation is fast" because no shifting needs to occur.
+-Java LinkedList class can be used as a list, stack or queue.
+
+Doubly Linked List
+In the case of a doubly linked list, we can add or remove elements from both sides.(img)
+
+**********************************
+    Difference between ArrayList and LinkedList
+ArrayList and LinkedList both implements List interface and maintains "insertion order"
+
+ArrayList
+1-ArrayList internally uses a "dynamic" array to store the elements.
+2-"Manipulation" with ArrayList is "slow" because it internally uses an array.
+    If any element is "removed" from the array, all the bits are "shifted" in memory.
+3-An ArrayList class can act as a list only because it implements List only
+4- ArrayList is better for "storing and accessing data."
+
+LinkedList
+1-LinkedList internally uses a "doubly linked list" to store the elements.
+2-"Manipulation" with LinkedList is "faster" than ArrayList because
+    it uses a "doubly linked list", so no bit shifting is required in memory.
+3-LinkedList class can act as a list and queue both because it implements List and Deque interfaces.
+4-LinkedList is better" for manipulating data."
+
+Summary:
+1-LinkedList doubly linked list kullandığı için manipulation(veri işleme) daha kolay olur çünkü
+bir arraylistten eleman silinirse tüm elemanlar shift edilmek zorunda kalır.
+2-Array list saklama ve erişimde iyi, LinkedList işlemede iyi
+
+!!An ArrayList stores the elements sequentially based on their index.
+!!LinkedList uses a doubly-linked list to store its elements.
+A doubly-linked list consists of a collection of nodes, where each node contains three fields -
+The data at that node.
+A pointer/reference to the next node in the list.
+A pointer/reference to the previous node in the list.
+(img)
+Following are some key differences between LinkedList and ArrayList:
+
+A LinkedList consumes more memory than an ArrayList because it also stores the next and previous references along with the data.
+
+You can access an element in an ArrayList in O(1) time. But it takes O(n) time to access an element in a LinkedList because it needs to traverse to the desired element by following the next/prev references.
+
+Adding or removing elements are usually slower in an ArrayList compared to LinkedList.
+This is because the elements in the ArrayList needs to be shifted if a new element is added in the middle of the ArrayList.
+The ArrayList might also need to be resized to accommodate the new element.
+Similarly, in case of removal, the elements in the ArrayList needs to be shifted to the new positions.
+
+********************
+
+        LIST
+List in Java provides the facility to maintain the "ordered" collection.
+It contains the "index-based methods" to "insert", "update", "delete" and "search" the elements.
+It can have the "duplicate" elements also. We can also store the "null" elements in the list.
+
+public interface List<E> extends Collection<E>
+
+List<Book> list=new ArrayList<Book>();
+
+List<String> list=new LinkedList<String>();
+In short, you can create the List of any type.
+The ArrayList<T> and LinkedList<T> classes are used to specify the type. Here, T denotes the type.
+
+********************
+
+            Set Interface
+It extends the Collection interface.
+It represents the "unordered" set of elements which doesn't allow us to store the duplicate items.
+We can store at most one null value in Set. Set is implemented by "HashSet", "LinkedHashSet", and "TreeSet".
+
+********************
+
+            HASH SET
+Java HashSet class is used to create a collection that uses a "hash table" for storage.
+It inherits the AbstractSet class and implements Set interface.
+
+*The important points about Java HashSet class are:
+!!!HashSet stores the elements by using a mechanism called "hashing".
+!!!HashSet contains "unique elements" only. -> dublicate elemente izin verilmez...
+-HashSet allows null value.
+-HashSet class is non synchronized.
+!!!!!HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+!!!!!!HashSet is the best approach for search operations.
+
+*****Difference between List and Set*******
+!!!A list can contain duplicate elements whereas Set contains unique elements only.
+
+Methods: add,clear,clone,contains,isempty,iterator,size..
+
+****************************************
+
+        MAP INTERFACE
+A Map doesn't allow duplicate "keys",
+but you can have duplicate "values".
+**HashMap and LinkedHashMap" allow null keys and values",
+but "TreeMap" doesn't allow any null key or value.
+Map<Key,Values> map = new HashMap<>();
+key has to be unique
+put,remove,clear,get
+
+    Map.Entry Interface
+Entry is the subinterface of Map.
+So we will be accessed it by Map.Entry name.
+It returns a collection-view of the map, whose elements are of this class.
+It provides methods to "get key and value".
+methods : getKey, getValue, setValue
+
+*******************
+        HASH MAP
+Java HashMap "class" implements the Map interface
+which allows us to "store key and value pair", where keys should be unique.
+It is easy to perform operations using the key index like updation, deletion, etc.
+HashMap<K,V>, where K stands for key and V for value.
+
+*Points to remember
+-Java HashMap contains values based on the key.
+-Java HashMap contains only unique keys.
+-Java HashMap may have one null key and multiple null values.
+-Java HashMap is non synchronized.
+-Java HashMap maintains no order.
+-The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+
+https://www.javatpoint.com/working-of-hashmap-in-java  -> ÖNEMLİ!
+PUT METHODU ÇAĞRILDIGINDA ARKADA HASHING ÇALIŞIYOR!
+
+**************************************
+
+        **Collections Class
+Collection extends Object
+methodları statictir.
+Collections.addAll()
+Collections.sort()
+Collections.max(list)
+Collections.min(list)
+Collections.sort(list, Collections.reverseOrder());
+
+**************************************
+        Comparable interface
+contains only one method named compareTo(Object).
+It provides a single sorting sequence only, i.e., you can sort the elements on the basis of single data member only.
+for example, it may be rollno, name, age or anything else.
+
+**compareTo(Object obj) method
+public int compareTo(Object obj): It is used to compare the current object with the specified object. It returns
+
+positive integer, if the current object is greater than the specified object.
+negative integer, if the current object is less than the specified object.
+zero, if the current object is equal to the specified object.
+******************************************************************************************************************
+https://www.javatpoint.com/difference-between-comparable-and-comparator
+ Comparator interface
+/***Difference between Comparable and Comparator>>>Java Comparator interface is used to order the objects of a user-defined class.
+
+
+This interface is found in java.util package and contains 2 methods compare(Object obj1,Object obj2) and equals(Object element).
+
+It provides multiple sorting sequences, i.e., you can sort the elements on the basis of any data member, for example, rollno, name, age or anything else.
+
+//IF YOU HAVE CUSTOM CLASS GO WITH COMPARABLE INTERFACE.. 
+
+!!!!!!
+equals(): It checks the equality of two objects.
+It compares the Key, whether they are equal or not.
+It is a method of the Object class.
+It can be overridden.
+If you override the equals() method, then it is mandatory to override the hashCode() method.
+
+hashCode(): This is the method of the object class.
+It returns the memory reference of the object in integer form.
+The value received from the method is used as the bucket number.
+The bucket number is the address of the element inside the map. Hash code of null Key is 0.
+
+Buckets: Array of the node is called buckets.
+Each node has a data structure like a LinkedList.
+More than one node can share the same bucket.
+It may be different in capacity.
+
+https://www.youtube.com/watch?v=HhrQqmp3hXI&ab_channel=Telusko
+https://www.callicoder.com/java-8-optional-tutorial/
+https://www.callicoder.com/java-linkedlist/
+https://www.javatpoint.com/collections-in-java
+https://www.javatpoint.com/java-hashset
