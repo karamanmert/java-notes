@@ -1,7 +1,8 @@
-package bastan_Basla_5;
+package bastan_Basla_5.dependency_injection;
 
 //WITH DIP
-public class DepInjv2 {
+//loose coupling
+public class SecondC {
     public static void main(String[] args) {
         Carr cc = new Carr(new GasEngine1());
         cc.run();

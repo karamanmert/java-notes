@@ -1,12 +1,13 @@
-package bastan_Basla_5;
+package bastan_Basla_5.dependency_injection;
+
 //tighly coupled
 //without DIP
-public class DependencyInjection {
+public class FirstC {
     public static void main(String[] args) {
         Car c = new Car();
     }
 }
-
+//Car class depends on GasEngine class.
 class Car{
     public Car(){
         GasEngine engine = new GasEngine();
