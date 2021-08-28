@@ -31,6 +31,7 @@ public class StringsTutorial {
 
 
 
+
         /*
         String s1="java";//creating string by Java string literal
         char ch[]={'s','t','r','i','n','g','s'};
