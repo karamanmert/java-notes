@@ -1,9 +1,10 @@
 package bastan_basla_2.Exception1;
 
 import java.util.Scanner;
+
 //BU ÖRNEKTE EXCEPTION METHODDAN FIRLATILDI.
 public class MethodEx1 {
-    //methodun başlıgında exception fırlatılacagı belirtilmeliydi ama unchecked oldugu için gerek yok.
+    //methodun başlıgında exception fırlatılacagı belirtilmeliydi veya try catch kullanılmalıydı ama unchecked oldugu için gerek yok.
     public static int quotient(int number1, int number2) {
         if (number2 == 0)
             throw new ArithmeticException("Divisor cannot be zero");
@@ -13,13 +14,11 @@ public class MethodEx1 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         // Prompt the user to enter two integers
         System.out.print("Enter two integers: ");
         int number1 = input.nextInt();
         int number2 = input.nextInt();
-        quotient(number1,number2);
-
+        System.out.println(quotient(number1, number2));
     }
 }
 /*

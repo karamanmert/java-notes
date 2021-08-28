@@ -1,6 +1,4 @@
-package bastan_basla_2.Exception1;
 
-/*
 runtime errorler: exception thrown edilerek çözülür.
 
 Exceptionlar try catch yada methodlarda handle edilmek zorunda.(1-2)
@@ -62,5 +60,13 @@ Multi catch var: catch (Exception1 | Exception2 | ... | Exceptionk ex)
 
 Finally bloğu her zaman çalışır.
 
+ÖZET:
+RuntimeExceptionlar -> Unchecked.
+KALAN TUM Exceptionlar -> Checked
 
- */
+Checked exception: program kullanıcıyı try catch blogunda hatayı kontrol edip düzelmesi için zorlar.
+yada method başlıgında başlığında belirtmesi gerekir.
+->methodda exception fırlatılacagını belirt.
+
+Unchecked-> try catch kullanmaya gerek yok.
+->exception fırlatılacagını belirtmeye gerek yok.

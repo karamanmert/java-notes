@@ -2,6 +2,7 @@ package bastan_basla_2.Exception1;
 
 import java.util.Scanner;
 //try catch ile exception yapıldı.
+// BU BIR UNCHECKED EX. YANI JVM HATAYI ZATEN YAKALAYACAK. ONUN İÇİN TRY CATCH E DE GEREK YOK.
 public class TryCatchEx2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
