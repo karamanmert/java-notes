@@ -1,0 +1,111 @@
+https://www.javatpoint.com/java-string
+
+String, array dizisini temsil eder.
+Arrayin karakterleri, Stringler gibi çalışır.
+
+char[] ch={'m','e','r','t'};
+String s=new String(ch);
+    ==
+String s="mert";
+
+
+String implemets Serializable
+String implemets Comparable
+String implemets CharSequence
+
+CharSequence Interface
+Karakter dizisini temsil etmek için kullanılır.
+String, StringBuilder, StringBuffer classları tarafından implement edilir.
+!!Yani Java'da 3 farklı class kullanarak String oluşturabiliriz.
+1-String implements CharSequence
+2-StringBuilder implements CharSequence
+3-StringBuffer implements CharSequence
+
+Stringler değişmez.(immutable)
+Yani stringi ne zaman değiştirmeye çalışsak, yeni bir instance oluşur.
+
+Değişebilen Stringler içni, StringBuffer ve StringBuilder kullanmamız gerekir.
+
+What is String in Java?
+String bir Object olup, karakter dizisini temsil eder.
+
+How To Create a String?
+1- Literal
+2- new Keyword.
+
+1-Literal
+Double quotes kullanarak(" ")
+String s="mert"
+
+!!!!Ne zaman string oluştursan, JVM "string constant pool"'u kontrol eder. Eğer string o havuzda bulunursa,
+havuzdaki stringin referansı geriye dönülür.(yani yeni string oluşmaz.)
+Eğer string havuzda yoksa, yeni bir string oluşturulup, havuza atılıp, referansı dönülür.
+
+****String objeleri "String Constant Pool"' adlı memoryde özel bir yerde saklanır.
+
+String s1="Welcome";
+String s2="Welcome";//It doesn't create a new instance
+(pool.png)
+
+Bu örnekte s1 için havuzda referans bulunmayacak, yani s1 objesi yaratılacak.
+s2 objesi için ise, JVM "String Constant Pool"'a bakacak. "Welcome" stringini bulduğu için
+referansını geri dönecek.
+YANİ MEMORY'DE S1 VE S2 AYNI YERİ GÖSTERECEK. IKISININ DE ADRESİ 12345x gibi. (fotoda var)
+
+2- new keyword
+String s=new String("Welcome");// creates two objects and one reference variable
+
+new keywordunu kullanırsan, JVM normal heap memory de(NON-POOL) yeni bir String Objesi oluşturur.
+s değişkeni heapde bulunan bir alanı referans olarak gösterir.
+
+literal ile oluşturduğumuz String, "String Constant Pool" adlı özel bir yerdeydi.
+
+---
+Stringler değiştirilemez demiştik.
+trim(), concat(), toLowerCase() kullanırsak her zaman yeni bir string döndürürüz!! Orjinal String değişmez.
+!!Bir string refereansını başka bir stringin referansı yapabiliriz!
+
+---------------------
+
+== ve equals() farkı..
+== -> REFERANS kıyaslaması
+equals() -> İÇERİK KIYASLAMASI
+
+((In simple words, == checks if both objects point to the same memory location whereas
+.equals() evaluates to the comparison of values in the objects.))
+
+
+Java String class provides a lot of methods to perform operations on strings such as compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.
+
+
+-------------------- STRING KONU ÖZETİ-------------------
+== ve equals() farkı..
+== -> REFERANS kıyaslaması
+equals() -> İÇERİK KIYASLAMASI
+v
+String s2= "mert";
+String s3 = "mert";
+String s4 = new String("mert");
+System.out.println(s2==s3); //aynı adres doğru
+System.out.println(s3==s4); //farklı adres yanlış
+System.out.println(s3.equals(s4)); //aynı içerik doğru.
+s2 ve s3 neden aynı adres dersen de -> Stringler değişmez.(immutable).  Yani stringi ne zaman değiştirmeye çalışsak, yeni bir instance oluşur.Değişebilen Stringler içni, StringBuffer ve StringBuilder kullanmamız gerekir.
+2 şekil string oluşturulur 1 literal yani String s ="mert" 2-new ile String s = new String("mert")
+literal oluşturursan eğer Stringler memoryde özel bi alanda (String Constant Pool) da saklanır. new ile oluşturusan direkt heapde normal object gibi saklanır.
+String s = "mert" dediğin anda JVM, POOL'a bakar. yoksa oluşturur. Daha önceden başka biri "mert" diye bir string oluşturmuşsa adresini döndürür.
+s2=s3 eşitliği bundan
+
+---
+ //STRING OBJECTS ARE IMMUTABLE ( DEĞİŞMEZ. FARKLI BİR DEĞİŞKENE EŞİTLEMEZSEN
+        //VEYA REFERANSI DEĞİŞTİRMEZSEN
+        // str = "deneme" dersen eğer
+        //str, pool içinde deneme adlı bir alanı gösterir.
+        // str="deneme5211" dersen , str nin referansı değişir. yukarda bir deneme stringli kalır, str ise aşağıda deneme5211 i gösterir.
+        // bu durumda değişiyor gibi gözüküyor ama str deneme içeriği değişmez. strnin gösterdiği adres değişir.
+        // str.toUpperCase() -> dersen, strnin gösterdiği adrese gidip oradaki karakterleri büyük yapmaya çalışır.
+        // strnin adresi sabit ve orası bir string old. için dğeişmez.
+
+        String str = "deneme";
+        str.toUpperCase();
+        System.out.println(str);
+        //PNG YE BAK

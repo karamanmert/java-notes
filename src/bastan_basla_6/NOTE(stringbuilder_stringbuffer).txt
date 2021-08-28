@@ -1,0 +1,17 @@
+String objects are immutable. (DEĞİŞMEZ)
+Immutable simply means unmodifiable or unchangeable.
+
+StringBuffer Class.
+Değişebilir (mutable) string objeleri oluşturmak için kullanılır.
+
+append():
+StringBuffer sb=new StringBuffer("Hello ");
+sb.append("Java");//now original string is changed
+System.out.println(sb);//prints Hello Java
+
+StringBuilder class ->
+String buffer ile aynı işi yapar
+
+Farkı:
+    StringBuilder -> non-synchronized.
+    StringBuffer -> non-synchronized.
