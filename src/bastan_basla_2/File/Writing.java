@@ -17,7 +17,7 @@ public class Writing {
 
 
 
-        File file=new File("deneSil.txt");
+        File file=new File("src/bastan_basla_2/File/texts/deneSil.txt");
         if (file.exists())
             System.out.println("already exists.");
 

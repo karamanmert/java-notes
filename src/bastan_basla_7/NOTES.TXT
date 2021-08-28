@@ -1,0 +1,62 @@
+        ***Singleton Design Pattern****
+
+-Tek bir instance'ı olan ve bu classa erişmek isteyenin bu instance'ı kullanabildiği bir patterndir.
+
+    Advantage of Singleton design pattern
+Saves memory because object is not created at each request.
+Only single instance is reused again and again.
+
+    Usage of Singleton design pattern
+Singleton pattern is mostly used in multi-threaded and database applications.
+It is used in logging, caching, thread pools, configuration settings etc.
+
+    How to create Singleton design pattern?
+static member of class=Statik nedeniyle yalnızca bir kez bellek alır, Singleton sınıfının örneğini içerir.
+private constructor = Dışarıdan oluşmasını engellemek için.
+static factory method = Singleton objesinin tek erişim yerini belirtir ve kullanmak isteyene bunu döner.
+
+
+Early Instantiation: yükleme zamanında örneğin oluşturulması.
+Lazy Instantiation: gerektiğinde örneğin oluşturulması.
+
+    Early Instantiation of Singleton Pattern
+In such case,
+we create the instance of the class at the time of declaring the static data member,
+so instance of the class is created at the time of classloading.
+
+    Lazy Instantiation of Singleton Pattern (KODU EKSIK)
+In such case,
+we create the instance of the class in synchronized method or synchronized block,
+so instance of the class is created when required.
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+        Factory Pattern
+define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate.
+In other words, subclasses are responsible to create the instance of the class.
+Bir nesne oluşturmak için bir arabirim veya soyut sınıf tanımlayın, ancak hangi sınıfın başlatılacağına alt sınıfların karar vermesine izin verin.
+Başka bir deyişle, alt sınıflar, sınıfın örneğini oluşturmaktan sorumludur.
+
+    Advantage of Factory Design Pattern
+Factory Method Pattern allows the sub-classes to choose the type of objects to create.
+It promotes the loose-coupling by eliminating the need to bind application-specific classes into the code.
+That means the code interacts solely with the resultant interface or abstract class,
+so that it will work with any classes that implement that interface or that extends that abstract class.
+
+    Usage of Factory Design Pattern
+When a class doesn't know what sub-classes will be required to create
+When a class wants that its sub-classes specify the objects to be created.
+When the parent classes choose the creation of objects to its sub-classes.
+
+
+Factory pattern is one of the most used design patterns in Java.
+This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface.
+
+Implementation
+We're going to create a Shape interface and concrete classes implementing the Shape interface.
+A factory class ShapeFactory is defined as a next step.
+FactoryPatternDemo, our demo class will use ShapeFactory to get a Shape object.
+ It will pass information (CIRCLE / RECTANGLE / SQUARE) to ShapeFactory to get the type of object it needs.
