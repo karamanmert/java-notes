@@ -9,4 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="javafx" level="application" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="b94dfdfa-d1cf-4d4e-b52b-e4671619b4b0" />
+  </component>
 </module>
