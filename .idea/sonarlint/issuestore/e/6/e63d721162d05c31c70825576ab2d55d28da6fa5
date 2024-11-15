@@ -1,0 +1,24 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ¯8©²½Â­1
+T
+java:S1854""7Remove this useless assignment to local variable "mp3".(¬’à8¾÷çÃ­1
+Y
+java:S1854!"7Remove this useless assignment to local variable "mp3".(ğêó‰şÿÿÿÿ8¾÷çÃ­1
+S
+java:S1854"6Remove this useless assignment to local variable "fc".(Š†‹ƒ8¾÷çÃ­1
+L	java:S106"+Replace this use of System.out by a logger.(­ËÖşÿÿÿÿ8µ²½Â­1
+L	java:S106"+Replace this use of System.out by a logger.(­ËÖşÿÿÿÿ8¿÷çÃ­1
+D
+java:S1481"'Remove this unused "fc" local variable.(Š†‹ƒ8À÷çÃ­1
+L	java:S106"+Replace this use of System.out by a logger.(Ë°—Æÿÿÿÿÿ8Á÷çÃ­1
+J
+java:S1481!"(Remove this unused "mp3" local variable.(ğêó‰şÿÿÿÿ8Á÷çÃ­1
+n	java:S116C"MRename this field "PI" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä•¬¸ÿÿÿÿÿ8³²½Â­1
+C
+java:S11703"!Make this final field static too.(Ë¡ˆ÷şÿÿÿÿ8³²½Â­1
+C
+java:S1170C"!Make this final field static too.(ä•¬¸ÿÿÿÿÿ8³²½Â­1
+X	java:S125_"<This block of commented-out lines of code should be removed.(™‹ú8´²½Â­1
+_
+java:S2094h"BRemove this empty class, write its code or make it an "interface".(œÛŒ“8´²½Â­1
+H	java:S106"+Replace this use of System.out by a logger.(…ğ¾Œ8Ä÷çÃ­1
