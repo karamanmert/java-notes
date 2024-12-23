@@ -51,6 +51,7 @@ It extends the Collection interface.
 It represents the unordered set of elements which "doesn't allow us to store the duplicate items".
 We can store at most one null value in Set.
 Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+It does not have index (.get() )
 
 **HashSet
 It represents the collection that uses a "hash table for storage".
@@ -192,7 +193,7 @@ It inherits the AbstractSet class and implements Set interface.
 
 *****Difference between List and Set*******
 !!!A list can contain duplicate elements whereas Set contains unique elements only.
-
+list has index, set does not.
 Methods: add,clear,clone,contains,isempty,iterator,size..
 
 ****************************************

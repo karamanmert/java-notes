@@ -2,10 +2,11 @@ package section_4.collections.course4;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 public class HashSetTutorial {
     public static void main(String[] args) {
-        HashSet<Integer> hashSet = new HashSet<>();
+        Set<Integer> hashSet = new HashSet<>();
         hashSet.add(11);
         hashSet.add(12);
         hashSet.add(13);

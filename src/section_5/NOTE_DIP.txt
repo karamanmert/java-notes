@@ -27,21 +27,22 @@ and we can easily add new types of engines without changing Car class.
 because they dont have "hard-coded" dependencies.
 -This follows the Dependency Inversion Principle, which was instead of specific implementations,
 class requests abstractions(usually interface) which are provided to them when the class is constructed.
+
 ****So in the end, Dependency Injection is just a technique for achieving loose coupling between
 objects and their dependencies. Rather than directly instantiating dependencies that class needs
 in order to perform its actions, dependencies are provided to the class (most often) via constructor injection.
 
 --
-When we have many dependencies it is very good practice to use "Inversion Of Control" (IOC) containers
+When we have many dependencies, it is very good practice to use "Inversion Of Control" (IOC) containers
 which we can tell "which interfaces should be mapped to which concrete implementations" for all our
-dependencies and we can have it resolve those dependencies for us when it constructs our project.
+dependencies, and we can have it resolve those dependencies for us when it constructs our project.
 Ex:
     We could specify in the mapping for the IoC container that the IEngine dependency should be
     mapped to the GasEngine class and when we ask the IoC container for an instance of our Car class,
     it will automatically construct our Car class with a GasEngine dependency passed in.
 
     ----
-DI makes testing easier(can be done through constructor)
+DI makes testing easier (can be done through constructor)
 DI is a pattern we can use to implement IoC, where the control being inverted is setting an object's depedencies.
 
 
